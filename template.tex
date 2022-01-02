@@ -13,6 +13,7 @@
 \usepackage{csquotes} % gestion des guillemets
 \usepackage{fourier} % utilise une autre police que celle par défaut (Computer Modern)
 \usepackage{setspace}% gestion des interlignes
+\usepackage{blindtext}
 \onehalfspacing
 % insérez ici d'autres extensions avec la commande \usepackage[options]{nom de l'extension}
 
@@ -22,7 +23,6 @@
 
 \begin{document} % début du corps du texte
 \maketitle % affiche le titre
-
 \section{INTRODUCTION} % section 1
 Un ordinateur est une machine électronique programmable servant au traitement de l'information. Il peut être  assimilé à un système produisant des résultats à partir : d'informations fournies , et de méthode de résolution permettant de traiter ces informations.
 Les informations constituent des données et les méthodes de résolution aident à construire des algorithmes qui représentent l'enchaînement des actions à réaliser qui sont nécessaires à la résolution d'un problème donné et dont la traduction dans un langage de programmation permet de réaliser un programme, une application ou un logiciel.
@@ -48,17 +48,8 @@ Connaître un langage de programmation est un atout de plus en plus important su
 Cependant, quand on débute dans la programmation, on peut être confus face aux centaines de langages que l’on peut choisir. C’est pour cela que je rédige cet article afin de conseiller les futurs programmeurs dans le choix du langage idéal pour eux.
   % Contenu de l'introduction
 
-\section{Qu’est-ce qu’un langage de programmation ?} % section 2
-Un langage de programmation est un langage permettant de formuler des algorithmes et de produire des programmes informatiques qui appliquent ces algorithmes.
 
-Un programme est un enchaînement d'instruction, écrit dans un langage de programmation, exécutée par un ordinateur, permettant de traiter un problème et de renvoyer des résultats. Il représente la traduction un algorithme à l'aide d'un langage de programmation.
-\begin{figure}[h] % insère une figure ici (h = "here")
-  \centering % centre la figure
-  \includegraphics[scale=1]{img1.PNG} % insère une image en taille réelle
-\end{figure}
-L'ordinateur est une machine totalement dénuée d'intelligence. Un programme exécute les instructions bien précises c'est-à-dire celle que le programmeur lui a donnée. Des erreurs ou des fantaisies lors de son exécution ne proviennent pas de l'ordinateur mais d'une erreur de conception.
-
-\section{Historique des langages de programmation} % section 3
+\section{Historique des langages de programmation} % section 2
 
 Un ordinateur ne connaît que le système de numération binaire. Un langage utilisant le système binaire s'appelle langage machine.
 Pour écrire des programmes sous des formes accessibles,les langages d'assemblage ont vu le jour au début des années 50, 
@@ -67,6 +58,8 @@ Cependant, un programme écrit en langage d'assemblage n'est pas directement ex�
 Le langage d'assemblage présente un inconvénient : il reste lié à l'ordinateur pour lequel il a été écrit car chaque famille de processeurs possède son propre langage d'assemblage. Il est difficile à utiliser car il nécessite de bonnes connaissances sur le fonctionnement des processeurs.
 C'est pourquoi furent conçus les langages de programmation dits évolués plus compréhensibles et plus lisibles par l'homme.
 Un langage de programmation est défini par des règles d'écriture des règles de construction que doivent respecter les programmes. La difficulté, pour le programmeur, consiste à respecter ses règles imposées en fonction des differents paradigmes de programmation.
+
+
 
 On distingue 4 grandes générations de langages de programmation:
 \begin{itemize}
@@ -102,6 +95,145 @@ micro-ordinateurs, on utilise maintenant C, Pascal, Basic compilé.
 aident à créer des applications en ligne fluides.
 \end{itemize}
 
-
 Nombre de langages dont + de 100 (recensés) ont vu le jour depuis les années 50. La plupart n’ont fait qu’une apparition. D’autres comme le Cobol ou le Fortran restent d’actualité, car bien qu’ils ne soient plus utilisés aujourd’hui, de grosses applications ont été développées par des entreprises et sont toujours en fonctionnement. Leur re-développement sous de nouveaux langages représente des investissements non négligeables que certaines entreprises hésitent à mettre en œuvre.
+
+\section{Qu’est-ce qu’un langage de programmation ?} % section 3
+D’après Dave Small : « Un langage de programmation est une convention pour donner des ordres à un ordinateur. Ce n’est pas censé être obscur, bizarre et plein de pièges subtils. Ça, ce sont les caractéristiques de la magie. »
+
+Un langage de programmation est un code de communication, permettant à un être humain de dialoguer avec une machine en lui soumettant des instructions et en analysant les données matérielles fournies par le système, généralement un ordinateur. Le langage permet à la personne qui rédige un programme, de faire abstraction de certains mécanismes internes, généralement des activations et désactivations de commutateurs électroniques, qui aboutissent au résultat désiré.
+
+L'activité de rédaction du code source d'un programme est nommée programmation. Elle consiste en la mise en œuvre de techniques d'écriture et de résolution d'algorithmes informatiques, lesquelles sont fondées sur les mathématiques. 
+
+Un programme est un enchaînement d'instruction, écrit dans un langage de programmation, exécutée par un ordinateur, permettant de traiter un problème et de renvoyer des résultats. Il représente la traduction un algorithme à l'aide d'un langage de programmation.
+\begin{figure}[h] % insère une figure ici (h = "here")
+  \centering % centre la figure
+  \includegraphics[scale=1]{img1.PNG} % insère une image en taille réelle
+\end{figure}
+
+L'ordinateur étant une machine totalement dénuée d'intelligence. Un programme exécute les instructions bien précises c'est-à-dire celle que le programmeur lui a donnée. Des erreurs ou des fantaisies lors de son exécution ne proviennent pas de l'ordinateur mais d'une erreur de conception.
+
+\section{Paradigmes de programmation} % section 4
+
+Un paradigme est un modèle ou "patron" de pensée, qui aide à définir un ensemble de règles ou de concepts permettant d'appréhender un cadre particulier. 
+Ces concepts, adaptés à un domaine précis, permettent de voir un aspect de la réalité. 
+Ainsi, chaque science dispose d'un ou plusieurs paradigmes adaptés à son sujet d'étude. 
+En conséquence, la vision de chaque science sur un problème particulier est différente.
+
+Les paradigmes en programmation désignent les principes fondamentaux du développement de logiciels. Au mieux, on peut se les représenter comme des styles de programmation fondamentaux divers générant des codes logiciels de structure différente.
+
+\begin{figure}[h] % insère une figure ici (h = "here")
+  \centering % centre la figure
+  \includegraphics[scale=1]{paradigme.png} % insère une image en taille réelle
+ 
+ Vue d’ensemble des principaux paradigmes de programmation
+\end{figure}
+
+Traditionnellement, la programmation impérative est la forme la plus courante. Son code source définit clairement la séquence d’étapes à exécuter par un programme. Il en existe plusieurs sous-catégories, parmi lesquelles la programmation procédurale et la programmation axée sur l’objet. Suivant le principe de la programmation déclarative, seul l’objectif du logiciel est décrit (soit uniquement le résultat, et non les différentes étapes). Il en existe plusieurs sous-catégories, parmi lesquelles la programmation fonctionnelle et la programmation logique. Comment distinguer ces paradigmes logiciels les uns des autres ?
+
+\subsection{Programmation impérative : le paradigme de programmation traditionnel} % subsection1
+
+Parmi les paradigmes de programmation, la programmation impérative est considérée comme « traditionnelle ». Les premiers langages de programmation et, de ce fait, les premiers programmes informatiques, ont été intégralement conçus sur cette base, qui énonce une séquence stricte d’ordres déterminés (du lat. imperare « ordonner ») ou, pour ainsi dire, des instructions d’exécution. Ce paradigme de programmation sert entre autres de base aux langages Pascal et C, ainsi qu’à tous les langages d’assemblage. En programmation impérative, l’accent est notamment mis sur une collaboration aussi étroite que possible avec le système. Le code de programmation en résultant est alors facile à comprendre, mais très volumineux.
+
+Les programmations structurée, procédurale et modulaire sont trois approches majeures d’écriture et de structuration du code logiciel selon le paradigme programmation impérative.
+
+\subsubsection{Programmation structurée}
+
+L’approche de programmation structurée est une forme simplifiée de programmation impérative. La différence déterminante par rapport au principe de base : au lieu d’instructions de saut absolu (instructions entraînant le traitement, non pas avec l’ordre suivant, mais à un autre endroit), ce paradigme de programmation prévoit l’utilisation de boucles et structures de contrôle. Un exemple en est l’utilisation de « do...while » pour l’exécution automatique d’une instruction dès lors qu’une certaine condition est remplie (au moins une fois).
+
+\subsubsection{Programmation procédurale}
+
+Le paradigme de programmation procédurale étend l’approche impérative à la possibilité de subdiviser des algorithmes en plusieurs parties plus facilement maîtrisables. Celles-ci sont alors désignées par les termes procédures ou, selon le langage de programmation, sous-programmes, routines ou fonctions. L’objectif de cette subdivision est de faciliter la compréhension du code de programmation et d’éviter les répétitions de code inutiles.De par l’abstraction des algorithmes, le paradigme logiciel procédural s’impose comme une avancée déterminante entre les langages d’assemblage simples et les langages standard plus complexes.
+
+\subsubsection{Programmation modulaire}
+
+La programmation modulaire est également comprise comme une sous-catégorie du paradigme de programmation impérative. Elle est fondamentalement très similaire à l’approche procédurale et applique ce style de programmation aux exigences de projets logiciels plus volumineux et plus complets. Le code source est ici subdivisé de manière ciblée en blocs logiques indépendants les uns des autres pour plus de clarté et pour faciliter le processus de débogage (dépannage). Les différents blocs, encore appelés modules, peuvent être testés séparément avant d’être liés au sein d’une application commune.
+
+\subsubsection{Quelques langages de programmation impérative les plus connus }
+\begin{itemize}
+\item[$\bullet$]Fortran
+\item[$\bullet$]Java
+\item[$\bullet$]Pascal
+\item[$\bullet$]ALGOL
+\item[$\bullet$]C
+\item[$\bullet$]C# 
+\item[$\bullet$]C++
+\item[$\bullet$]Assembler
+\item[$\bullet$]BASIC
+\item[$\bullet$]COBOL
+\item[$\bullet$]Python
+\item[$\bullet$]Ruby...
+\end{itemize}
+
+\subsubsection{Avantages et inconvénients du paradigme de programmation impérative}
+
+Avantage:
+\begin{itemize}
+   \item[$\bullet$]Bien lisible
+   \item[$\bullet$]Comparativement facile à apprendre
+   \item[$\bullet$]Modèle de pensée aisément compréhensible pour les débutants (étapes de résolution)
+   \item[$\bullet$]Permet de tenir compte des caractéristiques de cas d’application spéciaux
+\end{itemize}
+
+Inconvenients:
+\begin{itemize}
+\item[$\bullet$]Le code devient très rapidement volumineux et perd en clarté
+\item[$\bullet$]Risque d’erreurs supérieur lors de retouches
+\item[$\bullet$]Les opérations de maintenance bloquent le développement d’applications, car la programmation est étroitement liée au système
+\item[$\bullet$]Optimisations et extensions plus difficiles
+\end{itemize}
+
+
+\subsection{Programmation déclarative : paradigmes logiciels du passé récent} % subsection2
+
+Parallèlement au développement continu de matériel et de logiciels, l’approche déclarative a permis l’élaboration d’un paradigme alternatif à la programmation de code. Le principe de base de la programmation déclarative réside ici dans la description du résultat final souhaité. Il s’agit donc en premier lieu de l’« objectif » à atteindre, et non du « déroulement » des étapes de résolution comme c’est le cas en programmation impérative. En programmation déclarative, le code est plus difficile à comprendre en raison de son haut niveau d’abstraction, mais est également plus court et plus précis.
+
+Il existe des différences plus importantes entre les sous-catégories du paradigme de programmation déclarative qu’entre celles du style impératif. En outre, leur définition ou répartition n’est pas toujours très précise. Les deux approches principales du paradigme programmation déclarative sont la programmation fonctionnelle et la programme logique.
+
+
+\subsubsection{Programmation fonctionnelle}
+
+Tous les langages de programmation standard contiennent des fonctions. L’approche fonctionnelle du développement logiciel traite toutefois certaines fonctions de manière très particulière :
+
+un programme fonctionnel se compose de fonctions ordonnées les unes par rapport aux autres, chaque partie de programme pouvant alors être conçue sous forme de fonction. Les fonctions peuvent prendre différents « statuts » au sein de la programmation fonctionnelle. Elles peuvent par exemple être liées les unes aux autres comme des données ou être utilisées sous forme de paramètres. Elles peuvent également être réutilisées sous forme de résultats fonctionnels. A contrario, le paradigme empêche l’affectation indépendante de valeurs.
+
+D’une manière générale, cette sous-catégorie de programmation déclarative est très importante dans le domaine informatique et peut être utilisée de manière très variée. Le traitement spécial des fonctions permet aux programmateurs du domaine de définir et d’appliquer de nouvelles règles de calcul étendues à partir de fonctions.
+
+\subsubsection{Programmation logique}
+
+Le paradigme logiciel logique, également appelé programmation prédictive, repose sur la logique mathématique. Plutôt qu’une suite d’instructions, un logiciel programmé selon ce principe contient toute une gamme de principes, entendue comme une liste de faits et hypothèses. Chaque requête adressée au programme est traitée par un interpréteur. Celui-ci a recours à ces principes et applique des règles précédemment définies pour atteindre le résultat souhaité.
+
+\subsubsection{Quelques langages de programmation déclarative les plus connus }
+\begin{itemize}
+   \item[$\bullet$]Prolog
+   \item[$\bullet$]Lisp
+   \item[$\bullet$]Haskell
+   \item[$\bullet$]Miranda
+   \item[$\bullet$]Erlang
+   \item[$\bullet$]SQL...
+\end{itemize}
+
+\subsubsection{Avantages et inconvénients du paradigme de programmation déclarative}
+
+Avantage:
+\begin{itemize}
+   \item[$\bullet$]Code plus court et plus efficace
+   \item[$\bullet$]Exécutable par des méthodes encore inconnues au moment de la programmation
+   \item[$\bullet$]Optimisation facile, grâce à la gestion de l’exécution par algorithme
+   \item[$\bullet$]Maintenance possible indépendamment du développement de l’application
+\end{itemize}
+
+Inconvenients:
+\begin{itemize}
+\item[$\bullet$]Parfois difficile à comprendre par des tiers
+\item[$\bullet$]Se fonde sur un modèle de pensée inhabituel pour l’homme (état de la solution)
+\item[$\bullet$]Les caractéristiques de différents cas d’application ne peuvent que difficilement être prises en considération dans la programmation
+\end{itemize}
+
+\subsection{Comparaison entre les programmations impérative et déclarative}
+
+Le paradigme de programmation impérative (paradigme axé sur les commandes) est le paradigme de base le plus ancien des deux. À l’inverse de la programmation déclarative, le développeur définit ici précisément, dans le code source, chacune des étapes à exécuter par l’ordinateur pour aboutir au résultat. Le « déroulement » prime. Cette approche se retrouve, par exemple, dans les langages de programmation Java, Pascal ou C. La programmation déclarative, au contraire, se concentre directement sur l’« objectif » à atteindre.
+
+Voici un exemple d’application dans le domaine du montage de meubles : alors que la programmation impérative s’apparente à une notice de montage, la programmation déclarative donne pour modèle une image du meuble fini.
+
+Plutôt que de laisser une marge d’exécution par l’utilisation de différentes fonctions, la programmation impérative utilise des variables qui sont transformées en durée d’exécution. Le code est plus long, mais aussi plus facile à comprendre que la forme abrégée et très abstraite du style déclaratif.
 \end{document} % fin du corps du texte
