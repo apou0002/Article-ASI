@@ -45,7 +45,8 @@ Pérennité du fabricant, pérennité du langage, pérennité de l'implémentati
 \item[$\bullet$]La documentation du langage
 \end{itemize}
 Connaître un langage de programmation est un atout de plus en plus important sur le marché du travail, puisque la demande de développeurs de logiciels augmente de façon exponentielle ces dernières années.
-Cependant, quand on débute dans la programmation, on peut être confus face aux centaines de langages que l’on peut choisir. C’est pour cela que je rédige cet article afin de conseiller les futurs programmeurs dans le choix du langage idéal pour eux.
+Cependant, quand on débute dans la programmation, on peut être confus face aux centaines de langages que l’on peut choisir. C’est pour cette raison que je rédige cet article afin de conseiller le débutant en programmation, qui cherche un premier langage ; l’amateur éclairé, qui veut réaliser un certain type de projet et l’ingénieur qui souhaite améliorer ses compétences.
+
   % Contenu de l'introduction
 
 
@@ -148,21 +149,8 @@ Le paradigme de programmation procédurale étend l’approche impérative à la
 
 La programmation modulaire est également comprise comme une sous-catégorie du paradigme de programmation impérative. Elle est fondamentalement très similaire à l’approche procédurale et applique ce style de programmation aux exigences de projets logiciels plus volumineux et plus complets. Le code source est ici subdivisé de manière ciblée en blocs logiques indépendants les uns des autres pour plus de clarté et pour faciliter le processus de débogage (dépannage). Les différents blocs, encore appelés modules, peuvent être testés séparément avant d’être liés au sein d’une application commune.
 
-\subsubsection{Quelques langages de programmation impérative les plus connus }
-\begin{itemize}
-\item[$\bullet$]Fortran
-\item[$\bullet$]Java
-\item[$\bullet$]Pascal
-\item[$\bullet$]ALGOL
-\item[$\bullet$]C
-\item[$\bullet$]C# 
-\item[$\bullet$]C++
-\item[$\bullet$]Assembler
-\item[$\bullet$]BASIC
-\item[$\bullet$]COBOL
-\item[$\bullet$]Python
-\item[$\bullet$]Ruby...
-\end{itemize}
+\subsubsection{Quelques langages de programmation impérative les plus connus }: Fortran,Java,Pascal,ALGOL,C,C++,Assembler,BASIC,COBOL,Python,
+Ruby...
 
 \subsubsection{Avantages et inconvénients du paradigme de programmation impérative}
 
@@ -202,10 +190,23 @@ D’une manière générale, cette sous-catégorie de programmation déclarative
 
 Le paradigme logiciel logique, également appelé programmation prédictive, repose sur la logique mathématique. Plutôt qu’une suite d’instructions, un logiciel programmé selon ce principe contient toute une gamme de principes, entendue comme une liste de faits et hypothèses. Chaque requête adressée au programme est traitée par un interpréteur. Celui-ci a recours à ces principes et applique des règles précédemment définies pour atteindre le résultat souhaité.
 
+\subsubsection{Programmation orientée-objet}
+
+Le paradigme orientée objets définit un ensemble d'objets qui interagissent entre eux. En d'autres termes : tout est objet. Elle n’améliore pas subitement la qualité de l’application comme par magie. En
+revanche, elle aide à mieux organiser le code, à le préparer à des futures évolutions et à rendre certaines portions réutilisables pour gagner en temps et en clarté. C'est pour cela que les développeurs professionnels l'utilisent dans la plupart de leurs projets.
+La POO se concentre dans la subdivision du problème sur les données.
+\begin{itemize}
+   \item[$\bullet$]La classe est la définition d’un type d’objets.
+   \item[$\bullet$]L’encapsulation est le principe de cacher les détails d’implémentation de l’extérieur par une interface.
+\end{itemize}
+
 \subsubsection{Quelques langages de programmation déclarative les plus connus }
 \begin{itemize}
    \item[$\bullet$]Prolog
+   \item[$\bullet$]Java 
+   \item[$\bullet$]C++
    \item[$\bullet$]Lisp
+   \item[$\bullet$]ADA
    \item[$\bullet$]Haskell
    \item[$\bullet$]Miranda
    \item[$\bullet$]Erlang
@@ -236,4 +237,125 @@ Le paradigme de programmation impérative (paradigme axé sur les commandes) est
 Voici un exemple d’application dans le domaine du montage de meubles : alors que la programmation impérative s’apparente à une notice de montage, la programmation déclarative donne pour modèle une image du meuble fini.
 
 Plutôt que de laisser une marge d’exécution par l’utilisation de différentes fonctions, la programmation impérative utilise des variables qui sont transformées en durée d’exécution. Le code est plus long, mais aussi plus facile à comprendre que la forme abrégée et très abstraite du style déclaratif.
+
+\section{Langages interprétés et langages compilés}
+
+On peut distinguer deux grandes familles de langages : les langages interprétés et les langages compilés.
+
+\subsection{Langages interprétés}
+Le langage interprété est un langage de programmation dans lequel les instructions du programme sont traduit au fur et à mesure et exécutées aussitôt par un programme auxiliaire « l’interpréteur« , c’est celui-ci qui va exécuter le programme.
+De ce fait l’exécution d’un programme interprété sera plus lente que celui d’un programme compilé.
+Premièrement il lit l’instruction, deuxièmement il l’exécute et passe à l’instruction suivante
+L’avantage du langage interprété est sa faciliter de programmation, il permet une exécution immédiate du programme même incomplet.
+
+Voici une liste de quelques langages interprétés connus : – JavaScript, Perl, Python, BASIC,Prolog,Mathematica, etc.
+\begin{figure}[h] % insère une figure ici (h = "here")
+  \centering % centre la figure
+  \includegraphics[scale=1]{interprete.png} % insère une image en taille réelle
+\end{figure}
+
+L'interprétation du code source est un processus « pas à pas » : l'interpréteur va exécuter les lignes du code une par une, en décidant à chaque étape ce qu'il va faire ensuite.
+
+\subsection{Langages compilés}
+
+Un langage compilé est un langage qui traduit toutes les instructions en une fois grâce à un programme auxiliaire, appelé compilateur, celui-ci va créer un fichier exécutable par le processeur et autonome.
+Il a comme pour désavantages de devoir compiler le programme à chaque modification de celui-ci et que le programme est compilé pour un processeur donné, voire un système d’exploitation donné mais a pour avantages sa vitesse d’exécution, la phase de compilation permet d’identifier les erreurs de syntaxe et le programme compilé garantit la sécurité du code source ce qui est utile pour les applications sécurisées nécessitant la confidentialité du code (paiement en ligne, transaction bancaire, …).
+
+Voici une liste de différents langages compilés : C, C++, CLEO, COBOL, etc.
+\begin{figure}[h] % insère une figure ici (h = "here")
+  \centering % centre la figure
+  \includegraphics[scale=1]{compile.png} % insère une image en taille réelle
+\end{figure}
+
+\subsection{Principales différences}
+
+On pourrait discuter très longtemps des avantages et inconvénients des différents types de langages mais les deux points qui sont les plus intéressants sont les suivants :
+
+Dans un langage interprété, le même code source pourra marcher directement sur tout ordinateur. Avec un langage compilé, il faudra (en général) tout recompiler à chaque fois ce qui pose parfois des soucis.
+Dans un langage compilé, le programme est directement exécuté sur l'ordinateur, donc il sera en général plus rapide que le même programme dans un langage interprété.
+
+\section{Les autres types de langages de programmation}
+
+\subsection{Langage de programmation événementielle}
+
+La programmation événementielle permet le développement d'applications à interfaces graphiques.
+Visual Basic, DLPHI, Visual C++, C++ builder, Visual J++, J++ builder, C sharp.
+
+Un programme doit être écrit en langage d'évolué à l'aide d'un éditeur de texte. Le programme ainsi obtenu est appelé programmes sources ou code source.
+
+Pour être utilisable, ce programme doit être traduit en langage machine. Le programme issu de cette traduction s'appelle programme objet.
+La traduction du programme source en programme objet s'appelle la compilation et est réalisée par un programme spécialisé appelé compilateur.
+La compilation permet de détecter les erreurs dues à un non-respect de la syntaxe du langage.
+
+\subsection{Langages de scripts}
+
+Les langages de script peuvent effectuer différentes actions dans un environnement d’exécution particulier, telles que l’automatisation de l’exécution de tâches, l’amélioration des fonctionnalités du logiciel parent, l’exécution de configurations, l’extraction de données à partir d’ensembles de données, et autres.
+Quelques langage de Script: JavaScript,PHP,Python ,Ruby,Groovy,Perl,Lua,PowerShell,R,VBA,etc...
+
+\subsection{Langage à balises}
+Ces langages dits à balises servent à mettre en forme des documents électroniques pour être après utilisés en intranet, extranet ou pour la GEIDE (gestion de documents électroniques). Les données sont enregistrées entre des
+« balises ». Il ne s'agit pas vraiment de langages, mais de format pour structurer les données qui pourront être exploitées à partir d'un simple navigateur.
+\begin{itemize}
+\item[$\bullet$]HTML (HyperText Markup Language)
+
+HTML n'est pas vraiment un langages de programmation; c'est une technique pour coder des pages à l'aide de commandes de mise en forme. Ces dernières sont ensuite interprétées par le navigateur (browser en anglais) et sont affichés à l'écran.
+
+\item[$\bullet$]XML
+
+XML permet l'enregistrement, la gestion de la communication d'informations dans un format précis. Un document XML est utilisable à partir d'un simple navigateur récent.
+
+\end{itemize}
+\subsection{Langage de programmation Web}
+\begin{itemize}
+    \item[$\bullet$]PHP
+    \item[$\bullet$]ASP
+    \item[$\bullet$]Ruby
+    \item[$\bullet$]Java Web
+    \item[$\bullet$]Python,etc.
+\end{itemize}
+
+\section{Conclusion:Le choix}
+Maintenant que nous avons vu dans les détail ce qu'est un langage de programmation, ses differents paradigmes; les types de langages de programmation, ainsi que les facilités que peuvent offrir les divers langages de programmation, et succinctement résumé ce que les langages existants fournissent, il convient de réaliser le but de cet article, c’est-à-dire choisir réellement un langage. 
+Nous avions choisi de présenter trois situations typiques:
+\begin{itemize}
+    \item[$\bullet$]le débutant en programmation, qui cherche un premier langage ;
+    \item[$\bullet$]l’amateur éclairé, qui veut réaliser un certain type de projet;
+    \item[$\bullet$]l’ingénieur qui souhaite améliorer ses compétences. 
+\end{itemize}
+
+Pour chacune, le choix dependra de plusieurs critères à savoir: l'objectif du future logiciel à concevoir (Quels sont ses differentes fonctionalité);son future environement d'exécution;sa durée de conception, etc
+Il n’y a pas de choix universellement reconnu comme « bon » néamoins, la puissance des langages tels que Python et Java, permet de nos jours grace à leurs technologies diverses de faciliter la conception de n'importe quel types d'application qu'elle soit Mobile, Web ou Destop. En revanche, il y a des choix ostensiblement médiocres.
+
+\section{Références:}
+\begin{itemize}
+    \item[$\bullet$] [1] Histoire et évolution des langages de programmation Par Denis Sureau, 2014; 
+    
+    \item[$\bullet$] [2] Initiation à la programmation, M. Eleuldj, Département Génie Informatique, EMI, septembre 2014;
+    
+    \item[$\bullet$] [3] Gilles Dowek, Le langage mathématique et les langages de programmation, Colloque Voir, entendre, raisonner, calculer, Cité des sciences et de l'industrie, La Villette, Paris, 1997;
+    
+    \item[$\bullet$] [4] Comment choisir un langage de programmation, Thomas Pornin, Technique et Pratique, Collection dirigée par Emmanuel Cornet et Alexandre Hérault;
+    
+    \item[$\bullet$] [5] https://www.ionos.fr/digitalguide/;
+    
+    \item[$\bullet$] [6] http://www.france-ioi.org/;
+    
+    \item[$\bullet$] [7] https://fr.acervolima.com/;
+    
+    \item[$\bullet$] [8] Différence entre le langage compilé et interprété, écrit par SHUBHAMSINGH10 et traduit par Acervo Lima de Difference between Compiled and Interpreted Language. Licence: CCBY-SA;
+
+    \item[$\bullet$] [9] Quelle est la différence entre langage interprété, semi-interprété et compilé ? Stephane Nachez , 12 mai 2018;
+    
+    \item[$\bullet$] [10] https://www.actuia.com/;
+    \item[$\bullet$] [11] https://www.bocasay.com/fr/;
+    \item[$\bullet$] [12] https://dept-info.labri.fr/;
+    \item[$\bullet$] [13] Projet web : les questions à se poser pour bien choisir ses langages de développement , Par Mathieu le 30 juillet, 2020; 
+    \item[$\bullet$] [14] Quel langage de programmation apprendre en 2021 ? ELODIE GOULAY ,18 FÉVRIER 2020;
+    \item[$\bullet$] [15] Concept of Programing Languages, Robert W.Sebesta, 2006;
+     \item[$\bullet$] [16] Quel langage de programmation choisir ? Publié par Elsa Moreira, 30 novembre 2021;
+     \item[$\bullet$] [17] Paradigmes de programmation Une introduction Olivier PORTE CNRS Mai 2012; 
+     \item[$\bullet$] [18] Les langages de programmation web les plus utilisés en 2020 ,Fév 06 2020, Daniel  
+     \item[$\bullet$] [19] https://cherrypulp.com/fr/;
+     \item[$\bullet$] [20] Programmation Procédurale VS POO 2022-01-02,Yan Morin
+\end{itemize}
 \end{document} % fin du corps du texte
